@@ -1,0 +1,98 @@
+$color: #FFAE19;
+$navbar-content-height: 128px*4;
+@import "header";
+@import "footer";
+@import "https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700";
+@import "https://api.foxiko.com/assets/fontawesome/css/all.css";
+:root {
+  --color: #FFAE19;
+}
+@mixin device-sm {
+  @media (min-width: 840px) {
+    @content
+  }
+}
+@mixin device-md {
+  @media (min-width: 950px) {
+    @content
+  }
+}
+@mixin device-lg {
+  @media (min-width: 1170px) {
+    @content
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @include device-sm {
+    max-width: 840px;
+  }
+  @include device-md {
+    max-width: 950px;
+  }
+  @include device-lg {
+    max-width: 1170px;
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.bg-primary {
+  background-color: var(--color) !important;
+}
+.bg-white {
+  background-color: white !important;
+}
+.color-white {
+  color: white !important;
+}
+.color-black {
+  color: black !important;
+}
+.color-primary {
+  color: var(--color) !important;
+}
+.heading1 {
+  font-size: 55px;
+  font-family: "Montserrat Black", sans-serif;
+  font-weight: 800;
+}
+.text-center {
+  text-align: center;
+}
+.kickstarter {
+  color: #037362 !important;
+}
+body {
+  display: grid;
+  min-width: 1px;
+  max-width: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+section, .section {
+  padding: 4rem 0;
+}
+
+
+hr {
+  width: 112px;
+  height: 12px;
+  background-color: var(--color);
+  border: none;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.hr-margin {
+  margin-bottom: 0;
+}
